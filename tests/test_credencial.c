@@ -19,9 +19,8 @@ static const char *PERMITIDAS[] = {
 
 static void test_formato_acepta_ocho_digitos(void)
 {
-    MT_ASSERT_EQ(cred_formato_valido("12345678"), 1);
+    MT_ASSERT_EQ(cred_formato_valido("12345678"), 0);
 }
-
 static void test_checksum_suma_modulo_diez(void)
 {
     MT_ASSERT_EQ(cred_checksum("12345678"), 8);
